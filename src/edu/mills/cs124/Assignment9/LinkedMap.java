@@ -2,19 +2,19 @@ package edu.mills.cs124.Assignment9;
 
 public class LinkedMap<K, V> extends AbstractMap<K, V> {
 
-	private static class Node<K, V> {
-		MapEntry<K, V> element;
-		Node<K, V> next;
+	private class Node {
+		MapEntry element;
+		Node next;
 		
 		// Constructor for a node
 		public Node(K key, V value) {
-			element = new MapEntry<K, V>(key, value);
+			element = new MapEntry(key, value);
 			next = null;
 		}
 	}
 	
 	// Private variable used to manage the linked list
-	private Node<K, V> head;
+	private Node head;
 	
 	// Constructor for the a LinkedMap object
 	public LinkedMap() {
