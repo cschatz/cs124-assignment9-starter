@@ -18,7 +18,7 @@ public class ProbeHashMap<K, V> extends AbstractMap<K, V> {
 	
 	// Determine which bucket a given key goes in
 	private int bucket(K key) {
-		return key.hashCode() % capacity;
+		return Math.abs(key.hashCode()) % capacity;
 	}
 	
 	@Override
