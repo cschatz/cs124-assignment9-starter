@@ -2,24 +2,19 @@ package edu.mills.cs124.Assignment9;
 
 public class ChainHashMap<K, V> extends AbstractMap<K, V> {
 
-	private class Node {
-		MapEntry element;
-		Node next;
+	private static class Node<K, V> {
+		MapEntry<K, V> element;
+		Node<K, V> next;
 		
 		// Constructor for a node
 		public Node(K key, V value) {
-			element = new MapEntry(key, value);
-			next = null;
-		}
-		
-		public Node() {
-			element = null;
+			element = new MapEntry<K, V>(key, value);
 			next = null;
 		}
 	}
 	
 	// The hash table itself (array of nodes)
-	private Node[] table;
+	private Node<K, V>[] table;
 	// Number of entries
 	private int numEntries;
 	// Capacity
@@ -31,7 +26,7 @@ public class ChainHashMap<K, V> extends AbstractMap<K, V> {
 	public ChainHashMap() {
 		capacity = 17;
 		numEntries = 0;
-		table = (Node[]) new Object[capacity];
+		table = (Node<K, V>[]) new Node[capacity];
 	}
 	
 	// Determine which bucket a given key goes in

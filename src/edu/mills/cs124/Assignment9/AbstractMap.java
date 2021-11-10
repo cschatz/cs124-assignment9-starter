@@ -2,7 +2,7 @@ package edu.mills.cs124.Assignment9;
 
 public abstract class AbstractMap<K, V> implements Map<K, V> {
 	
-	protected class MapEntry {
+	protected static class MapEntry<K, V> {
 		K key;
 		V value;
 		// constructor
