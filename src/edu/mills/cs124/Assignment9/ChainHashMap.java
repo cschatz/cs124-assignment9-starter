@@ -28,7 +28,7 @@ public class ChainHashMap<K, V> extends AbstractMap<K, V> {
 	// Constructor
 	
 	@SuppressWarnings("unchecked")
-	public ChainHashMap(K k, V v) {
+	public ChainHashMap() {
 		capacity = 17;
 		numEntries = 0;
 		table = (Node[]) new Object[capacity];
