@@ -12,7 +12,7 @@ public class ProbeHashMap<K, V> extends AbstractMap<K, V> {
 	// Constructor
 	public ProbeHashMap() {
 		capacity = 17;
-		numEntries = 1;
+		numEntries = 0;
 		table = (MapEntry<K, V>[]) new MapEntry[capacity];
 	}
 	
